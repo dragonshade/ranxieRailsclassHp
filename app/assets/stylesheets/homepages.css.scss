@@ -1,3 +1,72 @@
 // Place all the styles related to the Homepages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+
+$postListWidth: 600px;
+$avatarWidth: 100px;
+$avatarHeight: 100px;
+$panelLayer: 2;
+
+body
+{
+	background-color:#FFFFFF;
+
+	#base-panel
+	{
+		position:relative;
+		width: $postListWidth;
+		top:50px;
+		left:100px;
+		text-align:center;
+		background-color:#D6F5FF;
+		z-index: $panelLayer;
+
+		#post_list_top
+		{
+			position:relative;
+			background-color:white;
+			height:$avatarHeight;
+			width:$postListWidth;
+
+			#avatar
+			{
+				height:$avatarHeight;
+				width:$avatarWidth;
+				background-color:black;
+			}
+
+			#menu
+			{
+				position:relative;
+				margin-bottom:0px;
+				top: -$avatarHeight/2;
+				right: 50px;
+				width:50%;
+				height:50%;
+				float:right;
+
+			}
+		}
+
+		#post-list
+		{
+			position:relative;
+		}
+	}
+
+	#foot
+	{	
+		width: 100%;
+		text-align: center;
+		height:50px;
+		position:fixed;
+		bottom:20px;
+		text-align:center;
+		z-index: 1;
+	}
+
+}
+
