@@ -1,0 +1,23 @@
+	<div id="base-panel">
+		<div id="post_list_top">
+			<div id="avatar">
+
+			</div>
+			<div id="menu">				
+					<%= link_to "Create Post",controller: "posts", action:"new" %>
+			</div>
+		</div>
+		<ul id="post-list" class="nav nav-pills nav-stacked">
+			<li class="post-entry"> 
+				<%= link_to "Posts",root_path%> 
+			</li>
+			<%if not (@posts.nil? || @posts.empty?) %>
+			<% @post.each do |p| %>
+			<li class="post-entry">
+				<%= p.title %> 
+				<%= link_to "delete", delete_path %>  
+			</li> 
+			<% end %>
+			<% end %>
+		</ul>
+	</div>

@@ -1,6 +1,10 @@
 Homepage::Application.routes.draw do
-  root "homepages#home"
-  get "homepages/home"
+  get "posts/index"
+  get "posts/new"
+  get "posts/show"
+  get "posts/create"
+  get "posts/delete"
+  root "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
