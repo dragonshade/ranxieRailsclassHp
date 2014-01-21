@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
-	attr_accessor :title, :body
+#	attr_accessor :title, :body
 
-	def initialize(hash={})
-		@title=hash[:title]
-		@body=hash[:body]
-	end
+#	def initialize(hash={})
+#		@title=hash[:title]
+#		@body=hash[:body]
+#	end
 
 end
