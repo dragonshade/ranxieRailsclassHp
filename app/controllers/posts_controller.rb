@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
   def index
-    @posts=Post.all
+    @posts=Post.allsortbydate
   end
 
   def new
-    @posts=Post.all
+    @posts=Post.allsortbydate
   end
 
   def show
-    @posts = Post.all
+    @posts = Post.allsortbydate
     if @post = Post.find(params[:id])
     end
   end
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @posts=Post.all
+    @posts=Post.allsortbydate
     @post = Post.find(params[:id])
     @post.destroy
   end

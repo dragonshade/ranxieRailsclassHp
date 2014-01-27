@@ -5,5 +5,8 @@ class Post < ActiveRecord::Base
 #		@title=hash[:title]
 #		@body=hash[:body]
 #	end
+	def self.allsortbydate
+		self.all.sort_by{|post| -post[:id]}
+	end
 
 end

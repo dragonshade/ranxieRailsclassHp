@@ -11,16 +11,22 @@
 			<li class="post-entry"> 
 				<%= link_to "Posts",root_path%> 
 			</li>
-			<% if not @posts.nil? %>
-			<% @posts.each do |p| %>
-				<li class="post-entry">
-					<p>
-						<%= p.id %>
-						<%=p.title %> 
-						<%= link_to "delete", post_path(p), method: :delete %>  
-					</p>
-				</li> 
-			<% end %>
-			<% end %>
+			<table id="posts_table">
+				<% if not @posts.nil? %>
+				<% @posts.each do |p| %>
+					<tr class="post-entry">
+						<td class="td1">
+							<%= p.id %>
+						</td>
+						<td class="td2">
+							<%= link_to "#{p.title}", post_path(p) %> 
+						</td>
+						<td class="td3">
+							<%= link_to "delete", post_path(p), method: :delete%> 
+						</td>
+					</tr>
+				<% end %>
+				<% end %>
+			</table>
 		</ul>
 	</div>
