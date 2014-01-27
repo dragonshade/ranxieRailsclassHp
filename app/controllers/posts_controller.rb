@@ -20,9 +20,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @posts=Post.allsortbydate
     @post = Post.find(params[:id])
     @post.destroy
+    @posts=Post.allsortbydate
   end
 
   private
